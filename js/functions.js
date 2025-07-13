@@ -11,7 +11,7 @@ function getRndmInt(min, max) {
 }
 
 // variabile per i numeri generati dove vengono salvati
-let generatedNums = [];
+window.generatedNums = [];
 
 // funzione per mandare i numeri generati dove devono stare
 function generateNumbers() {
@@ -33,8 +33,6 @@ function generateNumbers() {
   }
 
 }
-
-generateNumbers()
 
 // stessa roba di prima per le const globali
 window.countdownVar = document.getElementById(`countdown`);
@@ -59,6 +57,4 @@ function timer(timeLeft) {
   // timer viene diminuito ad ogni intervallo di 1000ms e me lo ritorna come text
 }
 
-timer(15);  //15 secondi perchè ho il cervello bacato e non riesco a memmorizzare con meno, vai così...
-// delirio delle 2:30 am di sabato però funziona
 
