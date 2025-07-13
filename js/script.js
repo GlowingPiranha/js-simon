@@ -40,9 +40,10 @@ form.addEventListener(`submit`, function (e) {
     let foundInGenerated = false;
     // uso false per il controllo
 
-    for (let j = 0; j < generateNumbers.length; j++) {
-      if (userNum === generateNumbers[j]) {
+    for (let j = 0; j < generatedNums.length; j++) {
+      if (userNum === generatedNums[j]) {
         foundInGenerated = true;
+        break;
       }
     }
 
@@ -50,4 +51,9 @@ form.addEventListener(`submit`, function (e) {
       guessed.push(userNum);
     }
   }
-})
+  // messaggio che mi butta fuori il risultato
+  message.textContent = `Hai indovinato ${guessed.length} numeri: ${guessed.join(", ")}`;
+
+
+
+});
